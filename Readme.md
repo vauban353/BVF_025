@@ -35,29 +35,29 @@ To generate the standard reference design which is capable of running the majori
 |      6     |    n/a   | VDD_5V       |
 |      7     |    n/a   | SYS_5V       |
 |      8     |    n/a   | SYS_5V       |
-|      9     |    n/a   | PWR_BUT      | -> TODO
+|      9     |    n/a   | PWR_BUT      |
 |     10     |    n/a   | SYSRESETn    |
-|     11     |     B5   | MMUART_4 Rx  |
+|     11     |     TBD (1.8V)   | MMUART_4 Rx  |
 |     12     |     C5   | GPIO 9       |
-|     13     |     C7   | MMUART_4 Tx  |
-|     14     |     C6   | PWM channel 1 |
-|     15     |     A5   | GPIO 7        |
-|     16     |     A6   | PWM channel 2 |
-|     17     |     H4   | check - MSSIO7 - 1.8V  |
-|     18     |     J6   | check - MSSIO8 - 1.8V  |
-|     19     |    E13 - not connected on MPFS025  | MSS I2C0 SCL |
-|     20     |    F13 - not connected on MPFS025  | MSS I2C0 SDA |
-|     21     |    G12 - not connected on MPFS025  |              |
-|     22     |    H12 - not connected on MPFS025  |              |
-|     23     |    H13 - not connected on MPFS025  | GPIO 8       |
-|     24     |    G13 - not connected on MPFS025  |              |
-|     25     |    F15 - not connected on MPFS025  | GPIO 18      |
-|     26     |    G14 - not connected on MPFS025  |              |
-|     27     |    G15 - not connected on MPFS025  | GPIO 17      |
-|     28     |    H15 - not connected on MPFS025  |              |
-|     29     |    F17   | Design TODO - SPI1_DO |
-|     30     |    F16   | GPIO 16      |
-|     31     |    E16 - not connected on MPFS025  |              |
+|     13     |     TBD (1.8V)   | MMUART_4 Tx  |
+|     14     |     C6 (3.3V)  | PWM channel 1 |
+|     15     |     A5 (3.3V)  | GPIO 7        |
+|     16     |     A6 (3.3V)  | PWM channel 2 |
+|     17     |    A11 (3.3V)  | SPI0 CS  |
+|     18     |    A12 (3.3V)  | SPI0 DI  |
+|     19     |     B5 (3.3V)  | MSS I2C0 SCL |
+|     20     |     C7 (3.3V)  | MSS I2C0 SDA |
+|     21     |     B8 (3.3V)  |              |
+|     22     |    B17 (3.3V)  |              |
+|     23     |     C9 (3.3V)  | GPIO 8       |
+|     24     |    C17 (3.3V)  |              |
+|     25     |     D9 (3.3V)  | GPIO 18      |
+|     26     |     B7 (3.3V)  |              |
+|     27     |    D11 (3.3V)  | GPIO 17      |
+|     28     |     B4 (3.3V)  |              |
+|     29     |    F17 (3.3V)  | Design TODO - SPI1_DO |
+|     30     |    F16 (3.3V)  | GPIO 16      |
+|     31     |    E18 (3.3V)  |              |
 |     32     |    n/a   | VDD_ADC      |
 |     33     |    n/a   | ADC channel 4 |
 |     34     |    n/a   | GNDA_ADC     |
@@ -67,8 +67,8 @@ To generate the standard reference design which is capable of running the majori
 |     38     |    n/a   | ADC channel 3 |
 |     39     |    n/a   | ADC channel 0 |
 |     40     |    n/a   | ADC channel 1 |
-|     41     |    E15   | GPIO 0        |
-|     42     |    E14   | PWM channel 0 |
+|     41     |    E15 (3.3V)  | GPIO 0        |
+|     42     |    E14 (3.3V)  | PWM channel 0 |
 |     43     |    n/a   | GND           |
 |     44     |    n/a   | GND           |
 |     45     |    n/a   | GND           |
@@ -80,50 +80,50 @@ To generate the standard reference design which is capable of running the majori
 |------------|----------|------------|
 |      1     |    n/a   | DGND       |
 |      2     |    n/a   | DGND       |
-|      3     |     A7   | Design TODO           |
-|      4     |     D6   | Design TODO  |
-|      5     |     D7   | Design TODO  |
-|      6     |     D8   | Design TODO  |
-|      7     |     D9   |  GPIO 12     |
-|      8     |     B8   |  GPIO 13     |
-|      9     |     A8   |  GPIO 15     |
-|     10     |     C9   |  GPIO 14     |
-|     11     |    C10   |  GPIO 4      |
-|     12     |     B9   |  GPIO 3     |
-|     13     |    B10   | PWM channel4 |
-|     14     |    F10 - not connected on MPFS025  |  GPIO 1    | -> needs new pin assignment
-|     15     |    E10 - not connected on MPFS025  |  GPIO 6    | -> needs new pin assignment
-|     16     |    A11   |  GPIO 5     |
-|     17     |    A10   |  GPIO 2     |
-|     18     |    D11   |  GPIO 11    |
-|     19     |    C11   | PWM channel 3 |
-|     20     |    F11 - not connected on MPFS025        |   |
-|     21     |    F12 - not connected on MPFS025        |   |
-|     22     |    E11 - not connected on MPFS025        |   |
-|     23     |    D12 - not connected on MPFS025 |   |
-|     24     |    C12   | Design TODO  |
-|     25     |    B12   | Design TODO  |
-|     26     |    A12   |  GPIO      |
-|     27     |    A13   | GPIO (LCD group) |
-|     28     |    B14   | GPIO (LCD group) |
-|     29     |    B13   | GPIO (LCD group) |
-|     30     |    D14   | GPIO (LCD group) |
-|     31     |    D13   | GPIO (LCD group) |
-|     32     |    B15   | GPIO (LCD group) |
-|     33     |    A15   | GPIO (LCD group) |
-|     34     |    C15   | GPIO (LCD group) |
-|     35     |    C14   | GPIO (LCD group) |
-|     36     |    A17 - not connected on MPFS025 | GPIO (LCD group) |
-|     37     |    A16 - not connected on MPFS025 | GPIO (LCD group) |
-|     38     |    C17   | GPIO (LCD group) |
-|     39     |    B17   | GPIO (LCD group) |
-|     40     |    D17 - not connected on MPFS025 | GPIO (LCD group) |
-|     41     |    C16 - not connected on MPFS025 | GPIO (LCD group) |
-|     42     |    D16 - not connected on MPFS025 | GPIO (LCD group) |
-|     43     |    B19 - not connected on MPFS025 | GPIO (LCD group) |
-|     44     |    B20 - not connected on MPFS025 | GPIO (LCD group) |
-|     45     |    C20 - not connected on MPFS025 | GPIO (LCD group) |
-|     46     |    C19 - not connected on MPFS025 | GPIO (LCD group) |
+|      3     |    TBD (1.8V)  | Design TODO           |
+|      4     |    TBD (1.8V)  | Design TODO  |
+|      5     |    TBD (1.8V)  | Design TODO  |
+|      6     |    TBD (1.8V)  | Design TODO  |
+|      7     |    TBD (1.8V)  |  GPIO 12     |
+|      8     |    TBD (1.8V)  |  GPIO 13     |
+|      9     |    TBD (1.8V)  |  GPIO 15     |
+|     10     |    TBD (1.8V)  |  GPIO 14     |
+|     11     |    C10 (3.3V)  |  GPIO 4      |
+|     12     |     B9 (3.3V)  |  GPIO 3     |
+|     13     |    B10 (3.3V)  | PWM channel4 |
+|     14     |    TBD (1.8V)  |  GPIO 1    | -> needs new pin assignment
+|     15     |    TBD (1.8V)  |  GPIO 6    | -> needs new pin assignment
+|     16     |    TBD (1.8V)  |  GPIO 5     |
+|     17     |    TBD (1.8V)  |  GPIO 2     |
+|     18     |    TBD (1.8V)  |  GPIO 11    |
+|     19     |    C11 (3.3V)  | PWM channel 3 |
+|     20     |     A8 (3.3V)  |   |
+|     21     |    A10 (3.3V)  |   |
+|     22     |    TBD (1.8V)  |   |
+|     23     |    TBD (1.8V)  |   |
+|     24     |    TBD (1.8V)  | Design TODO  |
+|     25     |    TBD (1.8V)  | Design TODO  |
+|     26     |    TBD (1.8V)  |  GPIO      |
+|     27     |    A13 (3.3V)  | GPIO (LCD group) |
+|     28     |    B14 (3.3V)  | GPIO (LCD group) |
+|     29     |    B13 (3.3V)  | GPIO (LCD group) |
+|     30     |    D14 (3.3V)  | GPIO (LCD group) |
+|     31     |    D13 (3.3V)  | GPIO (LCD group) |
+|     32     |    B15 (3.3V)  | GPIO (LCD group) |
+|     33     |    A15 (3.3V)  | GPIO (LCD group) |
+|     34     |    C15 (3.3V)  | GPIO (LCD group) |
+|     35     |    C14 (3.3V)  | GPIO (LCD group) |
+|     36     |     C4 (3.3V) | GPIO (LCD group) |
+|     37     |     A7 (3.3V) | GPIO (LCD group) |
+|     38     |    C17 (3.3V)  | GPIO (LCD group) |
+|     39     |    B17 (3.3V)  | GPIO (LCD group) |
+|     40     |    B18 (3.3V) |
+|     41     |    C12 (3.3V) | GPIO (LCD group) |
+|     42     |     D6 (3.3V) | GPIO (LCD group) |
+|     43     |     D7 (3.3V) | GPIO (LCD group) |
+|     44     |     D8 (3.3V) | GPIO (LCD group) |
+|     45     |    D19 (3.3V) | GPIO (LCD group) |
+|     46     |    D18 (3.3V) | GPIO (LCD group) |
 
 ### J9: M.2 Interface
 
