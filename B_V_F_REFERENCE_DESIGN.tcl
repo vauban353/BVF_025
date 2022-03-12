@@ -146,7 +146,6 @@ import_files \
     -io_pdc "${constraint_path}/base_design.pdc" \
     -io_pdc "${constraint_path}/cape.pdc" \
     -io_pdc "${constraint_path}/M2.pdc" \
-    -io_pdc "${constraint_path}/M2_USB.pdc" \
     -io_pdc "${constraint_path}/MIPI_CSI_INTERFACE.pdc" \
     -io_pdc "${constraint_path}/ICICLE_USB.pdc"
 
@@ -159,7 +158,6 @@ organize_tool_files \
     -file "${project_dir}/constraint/io/base_design.pdc" \
     -file "${project_dir}/constraint/io/cape.pdc" \
     -file "${project_dir}/constraint/io/M2.pdc" \
-    -file "${project_dir}/constraint/io/M2_USB.pdc" \
     -file "${project_dir}/constraint/io/MIPI_CSI_INTERFACE.pdc" \
     -file "${project_dir}/constraint/io/ICICLE_USB.pdc" \
     -module {B_V_F_BASE_DESIGN::work} \

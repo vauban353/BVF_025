@@ -54,11 +54,11 @@ sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PCIE:PCIE_0_HOT_RST_EXIT}
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PCIE:PCIE_0_DLUP_EXIT}
 
 # Add stub for USB PHY connected to M.2 interface
-sd_instantiate_component -sd_name ${sd_name} -component_name {M2_USB} -instance_name {M2_USB_0} 
-sd_connect_pin_to_port -sd_name ${sd_name} -pin_name {M2_USB_0:USB1_CLK} -port_name {} 
-sd_connect_pin_to_port -sd_name ${sd_name} -pin_name {M2_USB_0:USB1_DIR} -port_name {} 
-sd_connect_pin_to_port -sd_name ${sd_name} -pin_name {M2_USB_0:USB1_NXT} -port_name {} 
-sd_connect_pin_to_port -sd_name ${sd_name} -pin_name {M2_USB_0:USB1_STP} -port_name {} 
+#sd_instantiate_component -sd_name ${sd_name} -component_name {M2_USB} -instance_name {M2_USB_0} 
+#sd_connect_pin_to_port -sd_name ${sd_name} -pin_name {M2_USB_0:USB1_CLK} -port_name {} 
+#sd_connect_pin_to_port -sd_name ${sd_name} -pin_name {M2_USB_0:USB1_DIR} -port_name {} 
+#sd_connect_pin_to_port -sd_name ${sd_name} -pin_name {M2_USB_0:USB1_NXT} -port_name {} 
+#sd_connect_pin_to_port -sd_name ${sd_name} -pin_name {M2_USB_0:USB1_STP} -port_name {} 
 
 #-------------------------------------------------------------------------------
 # Connections

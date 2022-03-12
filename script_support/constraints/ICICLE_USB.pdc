@@ -2,11 +2,12 @@
 #    -vcci 3.30               \
 #    -fixed true             \
 #    -update_iostd true
-    
-set_io -port_name USB0_RESETB \
-    -pin_name B7 \
-    -fixed true \
-    -DIRECTION OUTPUT \
-    -io_std LVCMOS33 
+
+#--- re-assigned from B7
+#set_io -port_name USB0_RESETB \
+#    -pin_name B7 \
+#    -fixed true \
+#    -DIRECTION OUTPUT \
+#    -io_std LVCMOS33 
 
 

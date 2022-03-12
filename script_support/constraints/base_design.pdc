@@ -3,19 +3,19 @@ set_iobank -bank_name Bank1  \
     -fixed true             \
     -update_iostd true
 
+#--- re-assigned from B4
+#set_io -port_name PHY_RSTn	\
+#    -pin_name B4	\
+#    -fixed true	\
+#    -io_std LVCMOS33  \
+#    -DIRECTION INOUT
 
-set_io -port_name PHY_RSTn	\
-    -pin_name B4	\
-    -fixed true	\
-    -io_std LVCMOS33  \
-    -DIRECTION INOUT
-
-
-set_io -port_name PHY_INTn	\
-    -pin_name C4	\
-    -fixed true	\
-    -io_std LVCMOS33  \
-    -DIRECTION INOUT
+#--- re-assigned from C4
+#set_io -port_name PHY_INTn	\
+#    -pin_name C4	\
+#    -fixed true	\
+#    -io_std LVCMOS33  \
+#    -DIRECTION INOUT
 
 
 set_io -port_name ADC_MCLK	\
