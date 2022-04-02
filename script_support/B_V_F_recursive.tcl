@@ -31,5 +31,20 @@ source script_support/components/CAPE_DEFAULT_GPIOS.tcl
 source script_support/components/CAPE_PWM.tcl
 source script_support/components/CAPE.tcl
 source script_support/components/M2_INTERFACE.tcl
+source script_support/components/HIGH_SPEED_INTERFACE/PF_TX_PLL_C0.tcl
+source script_support/components/HIGH_SPEED_INTERFACE/PF_XCVR_ERM_C0.tcl
+source script_support/components/HIGH_SPEED_INTERFACE/PF_XCVR_ERM_C1.tcl
+source script_support/components/HIGH_SPEED_INTERFACE/PF_XCVR_REF_CLK_C0.tcl
+source script_support/components/HIGH_SPEED_INTERFACE/PF_IO_C0.tcl
+source script_support/components/HIGH_SPEED_INTERFACE/PF_IO_C1.tcl
+source script_support/components/HIGH_SPEED_INTERFACE/PF_IO_C2.tcl
+source script_support/components/HIGH_SPEED_INTERFACE/PF_IO_C3.tcl
+source script_support/components/HIGH_SPEED_INTERFACE/PF_IO_C4.tcl
+source script_support/components/HIGH_SPEED_INTERFACE/PF_IO_C5.tcl
+source script_support/components/HIGH_SPEED_INTERFACE/PF_IO_C6.tcl
+source script_support/components/HIGH_SPEED_INTERFACE/PF_IO_C7.tcl
+source script_support/components/HIGH_SPEED_INTERFACE/PF_IO_C8.tcl
+source script_support/components/HIGH_SPEED_INTERFACE/PF_IO_C9.tcl
+source script_support/components/HIGH_SPEED_INTERFACE/HIGH_SPEED_INTERFACE.tcl
 source script_support/components/B_V_F_BASE_DESIGN.tcl 
 set_root -module {B_V_F_BASE_DESIGN::work} 

@@ -145,6 +145,7 @@ import_files \
     -convert_EDN_to_HDL 0 \
     -io_pdc "${constraint_path}/base_design.pdc" \
     -io_pdc "${constraint_path}/cape.pdc" \
+    -io_pdc "${constraint_path}/HIGH_SPEED_INTERFACE.pdc" \
     -io_pdc "${constraint_path}/M2.pdc" \
     -io_pdc "${constraint_path}/MIPI_CSI_INTERFACE.pdc" \
     -io_pdc "${constraint_path}/ICICLE_USB.pdc"
@@ -157,6 +158,7 @@ organize_tool_files \
     -tool {PLACEROUTE} \
     -file "${project_dir}/constraint/io/base_design.pdc" \
     -file "${project_dir}/constraint/io/cape.pdc" \
+    -file "${project_dir}/constraint/io/HIGH_SPEED_INTERFACE.pdc" \
     -file "${project_dir}/constraint/io/M2.pdc" \
     -file "${project_dir}/constraint/io/MIPI_CSI_INTERFACE.pdc" \
     -file "${project_dir}/constraint/io/ICICLE_USB.pdc" \
