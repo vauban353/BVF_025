@@ -143,6 +143,7 @@ source ./script_support/B_V_F_recursive.tcl
 
 import_files \
     -convert_EDN_to_HDL 0 \
+    -io_pdc "${constraint_path}/banks_voltage.pdc" \
     -io_pdc "${constraint_path}/base_design.pdc" \
     -io_pdc "${constraint_path}/cape.pdc" \
     -io_pdc "${constraint_path}/HIGH_SPEED_INTERFACE.pdc" \
@@ -156,6 +157,7 @@ import_files \
 
 organize_tool_files \
     -tool {PLACEROUTE} \
+    -file "${project_dir}/constraint/io/banks_voltage.pdc" \
     -file "${project_dir}/constraint/io/base_design.pdc" \
     -file "${project_dir}/constraint/io/cape.pdc" \
     -file "${project_dir}/constraint/io/HIGH_SPEED_INTERFACE.pdc" \

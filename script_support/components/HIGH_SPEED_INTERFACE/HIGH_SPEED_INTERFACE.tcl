@@ -12,10 +12,10 @@ sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO71_N} -port_direction 
 sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO71_P} -port_direction {IN} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO78_N} -port_direction {IN} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO78_P} -port_direction {IN} -port_is_pad {1}
-sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO82_N} -port_direction {IN} -port_is_pad {1}
-sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO82_P} -port_direction {IN} -port_is_pad {1}
-sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO90_N} -port_direction {IN} -port_is_pad {1}
-sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO90_P} -port_direction {IN} -port_is_pad {1}
+#sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO82_N} -port_direction {IN} -port_is_pad {1}
+#sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO82_P} -port_direction {IN} -port_is_pad {1}
+#sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO90_N} -port_direction {IN} -port_is_pad {1}
+#sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO90_P} -port_direction {IN} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {PCS_PMA_ARST_N} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {XCVR_0B_REFCLK_N} -port_direction {IN} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {XCVR_0B_REFCLK_P} -port_direction {IN} -port_is_pad {1}
@@ -30,10 +30,10 @@ sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO76_N} -port_direction 
 sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO76_P} -port_direction {OUT} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO81_N} -port_direction {OUT} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO81_P} -port_direction {OUT} -port_is_pad {1}
-sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO83_N} -port_direction {OUT} -port_is_pad {1}
-sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO83_P} -port_direction {OUT} -port_is_pad {1}
-sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO92_N} -port_direction {OUT} -port_is_pad {1}
-sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO92_P} -port_direction {OUT} -port_is_pad {1}
+#sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO83_N} -port_direction {OUT} -port_is_pad {1}
+#sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO83_P} -port_direction {OUT} -port_is_pad {1}
+#sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO92_N} -port_direction {OUT} -port_is_pad {1}
+#sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO92_P} -port_direction {OUT} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {XCVR_TX2_N} -port_direction {OUT} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {XCVR_TX2_P} -port_direction {OUT} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {XCVR_TX3_N} -port_direction {OUT} -port_is_pad {1}
@@ -72,22 +72,22 @@ sd_instantiate_component -sd_name ${sd_name} -component_name {PF_IO_C5} -instanc
 
 
 # Add PF_IO_C6_0 instance
-sd_instantiate_component -sd_name ${sd_name} -component_name {PF_IO_C6} -instance_name {PF_IO_C6_0}
+#sd_instantiate_component -sd_name ${sd_name} -component_name {PF_IO_C6} -instance_name {PF_IO_C6_0}
 
 
 
 # Add PF_IO_C7_0 instance
-sd_instantiate_component -sd_name ${sd_name} -component_name {PF_IO_C7} -instance_name {PF_IO_C7_0}
+#sd_instantiate_component -sd_name ${sd_name} -component_name {PF_IO_C7} -instance_name {PF_IO_C7_0}
 
 
 
 # Add PF_IO_C8_0 instance
-sd_instantiate_component -sd_name ${sd_name} -component_name {PF_IO_C8} -instance_name {PF_IO_C8_0}
+#sd_instantiate_component -sd_name ${sd_name} -component_name {PF_IO_C8} -instance_name {PF_IO_C8_0}
 
 
 
 # Add PF_IO_C9_0 instance
-sd_instantiate_component -sd_name ${sd_name} -component_name {PF_IO_C9} -instance_name {PF_IO_C9_0}
+#sd_instantiate_component -sd_name ${sd_name} -component_name {PF_IO_C9} -instance_name {PF_IO_C9_0}
 
 
 
@@ -142,14 +142,14 @@ sd_connect_pins -sd_name ${sd_name} -pin_names {"HSIO78_N" "PF_IO_C4_0:PADIN" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"HSIO78_P" "PF_IO_C4_0:PADIP" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"HSIO81_N" "PF_IO_C5_0:PADON" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"HSIO81_P" "PF_IO_C5_0:PADOP" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"HSIO82_N" "PF_IO_C6_0:PADIN" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"HSIO82_P" "PF_IO_C6_0:PADIP" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"HSIO83_N" "PF_IO_C7_0:PADON" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"HSIO83_P" "PF_IO_C7_0:PADOP" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"HSIO90_N" "PF_IO_C8_0:PADIN" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"HSIO90_P" "PF_IO_C8_0:PADIP" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"HSIO92_N" "PF_IO_C9_0:PADON" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"HSIO92_P" "PF_IO_C9_0:PADOP" }
+#sd_connect_pins -sd_name ${sd_name} -pin_names {"HSIO82_N" "PF_IO_C6_0:PADIN" }
+#sd_connect_pins -sd_name ${sd_name} -pin_names {"HSIO82_P" "PF_IO_C6_0:PADIP" }
+#sd_connect_pins -sd_name ${sd_name} -pin_names {"HSIO83_N" "PF_IO_C7_0:PADON" }
+#sd_connect_pins -sd_name ${sd_name} -pin_names {"HSIO83_P" "PF_IO_C7_0:PADOP" }
+#sd_connect_pins -sd_name ${sd_name} -pin_names {"HSIO90_N" "PF_IO_C8_0:PADIN" }
+#sd_connect_pins -sd_name ${sd_name} -pin_names {"HSIO90_P" "PF_IO_C8_0:PADIP" }
+#sd_connect_pins -sd_name ${sd_name} -pin_names {"HSIO92_N" "PF_IO_C9_0:PADON" }
+#sd_connect_pins -sd_name ${sd_name} -pin_names {"HSIO92_P" "PF_IO_C9_0:PADOP" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"PCS_PMA_ARST_N" "PF_XCVR_ERM_C0_0:CTRL_ARST_N" "PF_XCVR_ERM_C0_0:LANE0_PCS_ARST_N" "PF_XCVR_ERM_C0_0:LANE0_PMA_ARST_N" "PF_XCVR_ERM_C1_0:CTRL_ARST_N" "PF_XCVR_ERM_C1_0:LANE0_PCS_ARST_N" "PF_XCVR_ERM_C1_0:LANE0_PMA_ARST_N" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_IO_C0_0:QF" "PF_IO_C1_0:DF" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_IO_C0_0:QR" "PF_IO_C1_0:DR" }
@@ -157,10 +157,12 @@ sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_IO_C2_0:QF" "PF_IO_C3_0:DF" 
 sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_IO_C2_0:QR" "PF_IO_C3_0:DR" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_IO_C4_0:QF" "PF_IO_C5_0:DF" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_IO_C4_0:QR" "PF_IO_C5_0:DR" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_IO_C6_0:QF" "PF_IO_C7_0:DF" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_IO_C6_0:QR" "PF_IO_C7_0:DR" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_IO_C8_0:QF" "PF_IO_C9_0:DF" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_IO_C8_0:QR" "PF_IO_C9_0:DR" }
+#sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_IO_C6_0:QF" "PF_IO_C7_0:DF" }
+#sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_IO_C6_0:QR" "PF_IO_C7_0:DR" }
+#sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_IO_C4_0:QF" "PF_IO_C7_0:DF" }
+#sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_IO_C4_0:QR" "PF_IO_C7_0:DR" }
+#sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_IO_C8_0:QF" "PF_IO_C9_0:DF" }
+#sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_IO_C8_0:QR" "PF_IO_C9_0:DR" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_TX_PLL_C0_0:CLK_125" "PF_XCVR_ERM_C0_0:CTRL_CLK" "PF_XCVR_ERM_C1_0:CTRL_CLK" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_TX_PLL_C0_0:REF_CLK" "PF_XCVR_ERM_C0_0:LANE0_CDR_REF_CLK_0" "PF_XCVR_ERM_C1_0:LANE0_CDR_REF_CLK_0" "PF_XCVR_REF_CLK_C0_0:REF_CLK" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_XCVR_ERM_C0_0:LANE0_RXD_N" "XCVR_RX2_N" }

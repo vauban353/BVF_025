@@ -52,19 +52,16 @@ set_io -port_name M2_UART_WAKEn  \
     -DIRECTION INPUT
 
 
-#--- re-assigned from E18
-#set_io -port_name M2_PERST0n \
-#    -pin_name E18            \
-#    -fixed true              \
-#    -DIRECTION OUTPUT        \
-#    -io_std LVCMOS33 
+set_io -port_name M2_CLKREQ0n  \
+    -pin_name W19              \
+    -fixed true                \
+    -DIRECTION INPUT
 
-#--- re-assigned from D18
-#set_io -port_name M2_CLKREQ0n  \
-#    -pin_name D18              \
-#    -fixed true                \
-#    -DIRECTION INPUT           \
-#    -io_std LVCMOS33 
+
+set_io -port_name M2_PERST0n  \
+    -pin_name Y19             \
+    -fixed true               \
+    -DIRECTION OUTPUT
 
 
 set_io -port_name M2_W_DISABLE1n  \

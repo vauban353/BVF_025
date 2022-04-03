@@ -15,23 +15,21 @@ set_io -port_name XCVR_TX3_P    \
     -DIRECTION OUTPUT
 
 
-#set_io -port_name XCVR_RX2_N    \
-#    -pin_name R19 \
-#    -DIRECTION INPUT
+set_io -port_name XCVR_RX2_N    \
+    -pin_name M21 \
+    -DIRECTION INPUT
 
-#set_io -port_name XCVR_RX2_P \
-#    -pin_name R20 \
-3    -DIRECTION INPUT
+set_io -port_name XCVR_RX2_P \
+    -pin_name M22 \
+    -DIRECTION INPUT
 
-#set_io -port_name XCVR_RX3_N    \
-#    -pin_name M21 \
-#    -DIRECTION INPUT
+set_io -port_name XCVR_RX3_N    \
+    -pin_name R19 \
+    -DIRECTION INPUT
 
-#set_io -port_name XCVR_RX3_P    \
-#    -pin_name M22 \
-#    -DIRECTION INPUT
-
-
+set_io -port_name XCVR_RX3_P    \
+    -pin_name R20 \
+    -DIRECTION INPUT
 
     
 set_io -port_name XCVR_0B_REFCLK_P  \
@@ -41,3 +39,75 @@ set_io -port_name XCVR_0B_REFCLK_P  \
 set_io -port_name XCVR_0B_REFCLK_N  \
     -pin_name N20                \
     -DIRECTION INPUT
+
+
+set_io -port_name HSIO69_N  \
+    -pin_name AA15          \
+    -fixed true             \
+    -DIRECTION INPUT
+
+
+set_io -port_name HSIO69_P  \
+    -pin_name Y15           \
+    -fixed true             \
+    -DIRECTION INPUT
+
+
+set_io -port_name HSIO70_N  \
+    -pin_name W14           \
+    -fixed true             \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HSIO70_P  \
+    -pin_name Y14           \
+    -fixed true             \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HSIO71_N  \
+    -pin_name Y13           \
+    -fixed true             \
+    -DIRECTION INPUT
+
+
+set_io -port_name HSIO71_P  \
+    -pin_name W13           \
+    -fixed true             \
+    -DIRECTION INPUT
+
+
+set_io -port_name HSIO76_N  \
+    -pin_name V15           \
+    -fixed true             \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HSIO76_P  \
+    -pin_name V14           \
+    -fixed true             \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HSIO78_N  \
+    -pin_name AA17          \
+    -fixed true             \
+    -DIRECTION INPUT
+
+
+set_io -port_name HSIO78_P  \
+    -pin_name AB17          \
+    -fixed true             \
+    -DIRECTION INPUT
+
+
+set_io -port_name HSIO81_N  \
+    -pin_name AA18          \
+    -fixed true             \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HSIO81_P  \
+    -pin_name AB18          \
+    -fixed true             \
+    -DIRECTION OUTPUT

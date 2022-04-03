@@ -15,14 +15,12 @@ set_io -port_name CAM_C_P  \
 set_io -port_name CAM_D0_N  \
     -pin_name AB12          \
     -fixed true             \
-    -io_std SUBLVDS18       \
     -DIRECTION INPUT
 
 
 set_io -port_name CAM_D0_P  \
     -pin_name AA12          \
     -fixed true             \
-    -io_std SUBLVDS18       \
     -DIRECTION INPUT
 
 
