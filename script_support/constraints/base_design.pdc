@@ -15,18 +15,6 @@ set_io -port_name PHY_RSTn  \
     -DIRECTION OUTPUT
 
 
-set_io -port_name SD_EMMC_SWITCH  \
-    -pin_name W17                 \
-    -fixed true                   \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name USER_BUTTON  \
-    -pin_name W16              \
-    -fixed true                \
-    -DIRECTION INPUT
-
-
 set_io -port_name ADC_MCLK	\
     -pin_name E19	\
     -fixed true	\

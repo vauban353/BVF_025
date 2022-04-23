@@ -831,9 +831,8 @@ sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO81_P
 #-------------------------------------------------------------------------------
 # User button and SD/eMMC switch control output
 #-------------------------------------------------------------------------------
-sd_create_scalar_port -sd_name ${sd_name} -port_name {USER_BUTTON} -port_direction {IN} 
-sd_create_scalar_port -sd_name ${sd_name} -port_name {SD_EMMC_SWITCH} -port_direction {OUT} 
-sd_connect_pins -sd_name ${sd_name} -pin_names {"SD_EMMC_SWITCH" "USER_BUTTON"} 
+sd_create_scalar_port -sd_name ${sd_name} -port_name {USER_BUTTON} -port_direction {IN}
+sd_connect_pins -sd_name ${sd_name} -pin_names {"USER_BUTTON" "B_V_F_MSS:GPIO_0_13_IN"} 
 
 
 #-------------------------------------------------------------------------------
