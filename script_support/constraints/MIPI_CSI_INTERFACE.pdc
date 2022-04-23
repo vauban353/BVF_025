@@ -25,25 +25,25 @@ set_io -port_name CAM_D0_P  \
 
 
 set_io -port_name CAM_D1_N  \
-    -pin_name Y16           \
+    -pin_name Y18           \
     -fixed true             \
     -DIRECTION INPUT
 
 
 set_io -port_name CAM_D1_P  \
-    -pin_name AA16          \
+    -pin_name Y19          \
     -fixed true             \
     -DIRECTION INPUT
 
 
 set_io -port_name CAM_D2_N  \
-    -pin_name AA22          \
+    -pin_name Y16          \
     -fixed true             \
     -DIRECTION INPUT
 
 
 set_io -port_name CAM_D2_P  \
-    -pin_name AA21          \
+    -pin_name AA16          \
     -fixed true             \
     -DIRECTION INPUT
 
@@ -61,6 +61,6 @@ set_io -port_name CAM_D3_P  \
 
 
 set_io -port_name CSI1_PWND \
-    -pin_name AA20          \
+    -pin_name W17          \
     -fixed true             \
     -DIRECTION INPUT

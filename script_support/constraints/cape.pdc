@@ -15,7 +15,7 @@ set_io -port_name P9_12	\
     -DIRECTION INOUT
 
 set_io -port_name P9_13  \
-    -pin_name V17        \
+    -pin_name W13        \
     -fixed true          \
     -DIRECTION OUTPUT
 
@@ -185,7 +185,7 @@ set_io -port_name P8_6  \
 
 
 set_io -port_name P8_7  \
-    -pin_name AB21      \
+    -pin_name V14       \
     -fixed true         \
     -DIRECTION INOUT
 
@@ -197,7 +197,7 @@ set_io -port_name P8_8  \
 
 
 set_io -port_name P8_9  \
-    -pin_name AB19      \
+    -pin_name W16      \
     -fixed true         \
     -DIRECTION INOUT
 
@@ -249,9 +249,10 @@ set_io -port_name P8_17  \
 
 
 set_io -port_name P8_18  \
-    -pin_name AB20       \
+    -pin_name V15        \
     -fixed true          \
     -DIRECTION INOUT
+
 set_io -port_name P8_19	\
     -pin_name C11	\
     -fixed true	\

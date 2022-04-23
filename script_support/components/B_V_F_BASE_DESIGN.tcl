@@ -758,6 +758,11 @@ sd_connect_pins -sd_name ${sd_name} -pin_names {"CAM_D3_N" "MIPI_CSI_INTERFACE_0
 #-------------------------------------------------------------------------------
 # High speed interface
 #-------------------------------------------------------------------------------
+sd_create_scalar_port -sd_name ${sd_name} -port_name {MSS_SGMII_RX1_P} -port_direction {IN} -port_is_pad {1}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {MSS_SGMII_RX1_N} -port_direction {IN} -port_is_pad {1}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {MSS_SGMII_TX1_P} -port_direction {OUT} -port_is_pad {1}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {MSS_SGMII_TX1_N} -port_direction {OUT} -port_is_pad {1}
+
 sd_create_scalar_port -sd_name ${sd_name} -port_name {XCVR_TX2_N} -port_direction {OUT}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {XCVR_TX2_P} -port_direction {OUT}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {XCVR_TX3_N} -port_direction {OUT}
@@ -827,6 +832,11 @@ sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO81_P
 #sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO83_P" "HSIO83_P"} 
 #sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO92_N" "HSIO92_N"} 
 #sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO92_P" "HSIO92_P"} 
+
+sd_connect_pins -sd_name ${sd_name} -pin_names {"MSS_SGMII_RX1_N" "B_V_F_MSS:SGMII_RX1_N" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"MSS_SGMII_RX1_P" "B_V_F_MSS:SGMII_RX1_P" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"MSS_SGMII_TX1_N" "B_V_F_MSS:SGMII_TX1_N" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"MSS_SGMII_TX1_P" "B_V_F_MSS:SGMII_TX1_P" }
 
 #-------------------------------------------------------------------------------
 # User button and SD/eMMC switch control output

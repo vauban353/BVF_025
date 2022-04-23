@@ -59,7 +59,7 @@ set_io -port_name M2_CLKREQ0n  \
 
 
 set_io -port_name M2_PERST0n  \
-    -pin_name Y19             \
+    -pin_name Y14             \
     -fixed true               \
     -DIRECTION OUTPUT
 
