@@ -69,6 +69,8 @@ sd_create_scalar_port -sd_name ${sd_name} -port_name {EMMC_DATA5} -port_directio
 sd_create_scalar_port -sd_name ${sd_name} -port_name {EMMC_DATA6} -port_direction {INOUT}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {EMMC_DATA7} -port_direction {INOUT}
 
+sd_create_scalar_port -sd_name ${sd_name} -port_name {SDC_CS} -port_direction {OUT}
+
 sd_create_bus_port -sd_name ${sd_name} -port_name {CA} -port_direction {OUT} -port_range {[5:0]} -port_is_pad {1}
 sd_create_bus_port -sd_name ${sd_name} -port_name {DQ} -port_direction {INOUT} -port_range {[31:0]} -port_is_pad {1}
 sd_create_bus_port -sd_name ${sd_name} -port_name {DQS} -port_direction {INOUT} -port_range {[3:0]} -port_is_pad {1}
@@ -283,49 +285,6 @@ sd_connect_pin_to_port -sd_name ${sd_name} -pin_name {M2_INTERFACE_0:M2_PEWAKEn}
 sd_connect_pin_to_port -sd_name ${sd_name} -pin_name {M2_INTERFACE_0:M2_I2C_ALTn} -port_name {} 
 
 
-#sd_connect_pin_to_port -sd_name ${sd_name} -pin_name {M2_INTERFACE_0:USB1_CLK} -port_name {} 
-#sd_connect_pin_to_port -sd_name ${sd_name} -pin_name {M2_INTERFACE_0:USB1_DIR} -port_name {} 
-#sd_connect_pin_to_port -sd_name ${sd_name} -pin_name {M2_INTERFACE_0:USB1_NXT} -port_name {} 
-#sd_connect_pin_to_port -sd_name ${sd_name} -pin_name {M2_INTERFACE_0:USB1_STP} -port_name {} 
-
-#sd_create_scalar_port -sd_name ${sd_name} -port_name {USB1_RESETB} -port_direction {OUT} 
-
-#sd_create_scalar_port -sd_name ${sd_name} -port_name {USB1_DATA0} -port_direction {INOUT} 
-#sd_create_scalar_port -sd_name ${sd_name} -port_name {USB1_DATA1} -port_direction {INOUT} 
-#sd_create_scalar_port -sd_name ${sd_name} -port_name {USB1_DATA2} -port_direction {INOUT} 
-#sd_create_scalar_port -sd_name ${sd_name} -port_name {USB1_DATA3} -port_direction {INOUT} 
-#sd_create_scalar_port -sd_name ${sd_name} -port_name {USB1_DATA4} -port_direction {INOUT} 
-#sd_create_scalar_port -sd_name ${sd_name} -port_name {USB1_DATA5} -port_direction {INOUT} 
-#sd_create_scalar_port -sd_name ${sd_name} -port_name {USB1_DATA6} -port_direction {INOUT} 
-#sd_create_scalar_port -sd_name ${sd_name} -port_name {USB1_DATA7} -port_direction {INOUT} 
-
-#sd_connect_pins -sd_name ${sd_name} -pin_names {"M2_INTERFACE_0:USB1_DATA0" "USB1_DATA0"} 
-#sd_connect_pins -sd_name ${sd_name} -pin_names {"M2_INTERFACE_0:USB1_DATA1" "USB1_DATA1"} 
-#sd_connect_pins -sd_name ${sd_name} -pin_names {"M2_INTERFACE_0:USB1_DATA2" "USB1_DATA2"} 
-#sd_connect_pins -sd_name ${sd_name} -pin_names {"M2_INTERFACE_0:USB1_DATA3" "USB1_DATA3"} 
-#sd_connect_pins -sd_name ${sd_name} -pin_names {"M2_INTERFACE_0:USB1_DATA4" "USB1_DATA4"} 
-#sd_connect_pins -sd_name ${sd_name} -pin_names {"M2_INTERFACE_0:USB1_DATA5" "USB1_DATA5"} 
-#sd_connect_pins -sd_name ${sd_name} -pin_names {"M2_INTERFACE_0:USB1_DATA6" "USB1_DATA6"} 
-#sd_connect_pins -sd_name ${sd_name} -pin_names {"M2_INTERFACE_0:USB1_DATA7" "USB1_DATA7"} 
-
-
-# Add SW1_OR_GPIO_2_28 instance
-#sd_instantiate_macro -sd_name ${sd_name} -macro_name {OR2} -instance_name {SW1_OR_GPIO_2_28}
-#sd_invert_pins -sd_name ${sd_name} -pin_names {SW1_OR_GPIO_2_28:A}
-
-
-
-# Add SW2_OR_GPIO_2_26 instance
-#sd_instantiate_macro -sd_name ${sd_name} -macro_name {OR2} -instance_name {SW2_OR_GPIO_2_26}
-#sd_invert_pins -sd_name ${sd_name} -pin_names {SW2_OR_GPIO_2_26:A}
-
-
-
-# Add SW3_OR_GPIO_2_27 instance
-#sd_instantiate_macro -sd_name ${sd_name} -macro_name {OR2} -instance_name {SW3_OR_GPIO_2_27}
-#sd_invert_pins -sd_name ${sd_name} -pin_names {SW3_OR_GPIO_2_27:A}
-
-
 # Add scalar net connections
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CK" "B_V_F_MSS:CK" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CK_N" "B_V_F_MSS:CK_N" }
@@ -375,32 +334,6 @@ sd_connect_pins -sd_name ${sd_name} -pin_names {"M2_PET1_N" "M2_INTERFACE_0:PCIE
 sd_connect_pins -sd_name ${sd_name} -pin_names {"M2_PET1_P" "M2_INTERFACE_0:PCIESS_LANE_TXD1_P" }
 #sd_connect_pins -sd_name ${sd_name} -pin_names {"PCIE:PCIE_1_INTERRUPT_OUT" "B_V_F_MSS:MSS_INT_F2M[1]" }
 
-#-------------------------------------------------------------------------------
-# eMMC stub
-#-------------------------------------------------------------------------------
-#sd_instantiate_component -sd_name ${sd_name} -component_name {EMMC} -instance_name {EMMC_0} 
-#sd_connect_pin_to_port -sd_name ${sd_name} -pin_name {EMMC_0:EMMC_CMD} -port_name {} 
-#sd_connect_pin_to_port -sd_name ${sd_name} -pin_name {EMMC_0:EMMC_CLK} -port_name {} 
-#sd_connect_pin_to_port -sd_name ${sd_name} -pin_name {EMMC_0:EMMC_DQ} -port_name {} 
-#sd_connect_pin_to_port -sd_name ${sd_name} -pin_name {EMMC_0:EMMC_RSTn} -port_name {} 
-
-#sd_create_scalar_port -sd_name ${sd_name} -port_name {EMMC_DATA0} -port_direction {INOUT} 
-#sd_create_scalar_port -sd_name ${sd_name} -port_name {EMMC_DATA1} -port_direction {INOUT} 
-#sd_create_scalar_port -sd_name ${sd_name} -port_name {EMMC_DATA2} -port_direction {INOUT} 
-#sd_create_scalar_port -sd_name ${sd_name} -port_name {EMMC_DATA3} -port_direction {INOUT} 
-#sd_create_scalar_port -sd_name ${sd_name} -port_name {EMMC_DATA4} -port_direction {INOUT} 
-#sd_create_scalar_port -sd_name ${sd_name} -port_name {EMMC_DATA5} -port_direction {INOUT} 
-#sd_create_scalar_port -sd_name ${sd_name} -port_name {EMMC_DATA6} -port_direction {INOUT} 
-#sd_create_scalar_port -sd_name ${sd_name} -port_name {EMMC_DATA7} -port_direction {INOUT} 
-
-#sd_connect_pins -sd_name ${sd_name} -pin_names {"EMMC_0:EMMC_DATA0" "EMMC_DATA0"} 
-#sd_connect_pins -sd_name ${sd_name} -pin_names {"EMMC_0:EMMC_DATA1" "EMMC_DATA1"} 
-#sd_connect_pins -sd_name ${sd_name} -pin_names {"EMMC_0:EMMC_DATA2" "EMMC_DATA2"} 
-#sd_connect_pins -sd_name ${sd_name} -pin_names {"EMMC_0:EMMC_DATA3" "EMMC_DATA3"} 
-#sd_connect_pins -sd_name ${sd_name} -pin_names {"EMMC_0:EMMC_DATA4" "EMMC_DATA4"} 
-#sd_connect_pins -sd_name ${sd_name} -pin_names {"EMMC_0:EMMC_DATA5" "EMMC_DATA5"} 
-#sd_connect_pins -sd_name ${sd_name} -pin_names {"EMMC_0:EMMC_DATA6" "EMMC_DATA6"} 
-#sd_connect_pins -sd_name ${sd_name} -pin_names {"EMMC_0:EMMC_DATA7" "EMMC_DATA7"} 
 
 #-------------------------------------------------------------------------------
 # Connect ADC.
@@ -468,6 +401,9 @@ sd_connect_pins -sd_name ${sd_name} -pin_names {"EMMC_DATA4" "B_V_F_MSS:EMMC_DAT
 sd_connect_pins -sd_name ${sd_name} -pin_names {"EMMC_DATA5" "B_V_F_MSS:EMMC_DATA5" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"EMMC_DATA6" "B_V_F_MSS:EMMC_DATA6" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"EMMC_DATA7" "B_V_F_MSS:EMMC_DATA7" }
+
+sd_connect_pins -sd_name ${sd_name} -pin_names {"SDC_CS" "B_V_F_MSS:GPIO_0_12_TRI" }
+
 
 sd_connect_pins -sd_name ${sd_name} -pin_names {"B_V_F_MSS:MSS_INT_F2M[63]" "IHC_SUBSYSTEM_0:E51_IRQ" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"B_V_F_MSS:MSS_INT_F2M[62]" "IHC_SUBSYSTEM_0:U54_1_IRQ" }
