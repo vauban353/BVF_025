@@ -111,3 +111,27 @@ set_io -port_name HSIO81_P  \
     -pin_name AB17          \
     -fixed true             \
     -DIRECTION OUTPUT
+
+
+set_io -port_name HSIO82_N  \
+    -pin_name Y16           \
+    -fixed true             \
+    -DIRECTION INPUT
+
+
+set_io -port_name HSIO82_P  \
+    -pin_name AA16          \
+    -fixed true             \
+    -DIRECTION INPUT
+
+
+set_io -port_name HSIO83_N  \
+    -pin_name W17           \
+    -fixed true             \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HSIO83_P  \
+    -pin_name W16          \
+    -fixed true             \
+    -DIRECTION OUTPUT

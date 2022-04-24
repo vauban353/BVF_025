@@ -173,7 +173,7 @@ set_io -port_name P8_4  \
 
 
 set_io -port_name P8_5  \
-    -pin_name Y20       \
+    -pin_name V19       \
     -fixed true         \
     -DIRECTION INOUT
 
@@ -191,13 +191,14 @@ set_io -port_name P8_7  \
 
 
 set_io -port_name P8_8  \
-    -pin_name Y21       \
+    -pin_name A8        \
     -fixed true         \
+    -io_std LVCMOS33    \
     -DIRECTION INOUT
 
 
 set_io -port_name P8_9  \
-    -pin_name W16      \
+    -pin_name Y20       \
     -fixed true         \
     -DIRECTION INOUT
 
@@ -243,8 +244,9 @@ set_io -port_name P8_16  \
 
 
 set_io -port_name P8_17  \
-    -pin_name V19        \
+    -pin_name A10        \
     -fixed true          \
+    -io_std LVCMOS33     \
     -DIRECTION INOUT
 
 

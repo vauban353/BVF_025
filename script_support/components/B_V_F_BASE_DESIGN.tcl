@@ -774,8 +774,8 @@ sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO76_N} -port_direction 
 sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO76_P} -port_direction {OUT}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO81_N} -port_direction {OUT}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO81_P} -port_direction {OUT}
-#sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO83_N} -port_direction {OUT}
-#sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO83_P} -port_direction {OUT}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO83_N} -port_direction {OUT}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO83_P} -port_direction {OUT}
 #sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO92_N} -port_direction {OUT}
 #sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO92_P} -port_direction {OUT}
 
@@ -793,8 +793,8 @@ sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO71_N} -port_direction 
 sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO71_P} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO78_N} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO78_P} -port_direction {IN}
-#sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO82_N} -port_direction {IN}
-#sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO82_P} -port_direction {IN}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO82_N} -port_direction {IN}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO82_P} -port_direction {IN}
 #sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO90_N} -port_direction {IN}
 #sd_create_scalar_port -sd_name ${sd_name} -port_name {HSIO90_P} -port_direction {IN}
 
@@ -818,8 +818,8 @@ sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO71_N
 sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO71_P" "HSIO71_P"} 
 sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO78_N" "HSIO78_N"} 
 sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO78_P" "HSIO78_P"} 
-#sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO82_N" "HSIO82_N"} 
-#sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO82_P" "HSIO82_P"} 
+sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO82_N" "HSIO82_N"} 
+sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO82_P" "HSIO82_P"} 
 #sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO90_N" "HSIO90_N"} 
 #sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO90_P" "HSIO90_P"} 
 sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO70_N" "HSIO70_N"} 
@@ -828,8 +828,8 @@ sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO76_N
 sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO76_P" "HSIO76_P"} 
 sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO81_N" "HSIO81_N"} 
 sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO81_P" "HSIO81_P"} 
-#sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO83_N" "HSIO83_N"} 
-#sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO83_P" "HSIO83_P"} 
+sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO83_N" "HSIO83_N"} 
+sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO83_P" "HSIO83_P"} 
 #sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO92_N" "HSIO92_N"} 
 #sd_connect_pins -sd_name ${sd_name} -pin_names {"HIGH_SPEED_INTERFACE_0:HSIO92_P" "HSIO92_P"} 
 
