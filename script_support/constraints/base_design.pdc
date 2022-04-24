@@ -23,6 +23,6 @@ set_io -port_name ADC_MCLK	\
 
 
 set_io -port_name USB0_RESETB  \
-    -pin_name W14              \
+    -pin_name Y19              \
     -fixed true                \
     -DIRECTION OUTPUT

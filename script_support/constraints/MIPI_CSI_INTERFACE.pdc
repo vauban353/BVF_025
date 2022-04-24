@@ -25,13 +25,13 @@ set_io -port_name CAM_D0_P  \
 
 
 set_io -port_name CAM_D1_N  \
-    -pin_name Y18           \
+    -pin_name W14           \
     -fixed true             \
     -DIRECTION INPUT
 
 
 set_io -port_name CAM_D1_P  \
-    -pin_name Y19          \
+    -pin_name Y14          \
     -fixed true             \
     -DIRECTION INPUT
 
